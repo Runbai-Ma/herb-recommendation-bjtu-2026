@@ -1,0 +1,11 @@
+# Competition data - obtain from the course platform and place here
+data/
+*.csv
+
+# Local run outputs
+result*/
+experiments/artifacts*/
+
+__pycache__/
+*.pyc
+.ipynb_checkpoints/

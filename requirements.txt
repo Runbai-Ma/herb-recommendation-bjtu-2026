@@ -1,0 +1,3 @@
+# Python 3.12.2: conda create -n herb2026 python=3.12.2 pip -y
+numpy==1.26.4
+torch==2.5.1
