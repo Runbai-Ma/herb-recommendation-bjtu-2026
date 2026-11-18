@@ -5,8 +5,8 @@ Recommendation Systems course project, Beijing Jiaotong University, Fall 2026).
 Given a patient's symptoms, recommend 5 herbs out of 805 candidates.
 Primary metric: macro-averaged **F1@5** over prescription records.
 
-**Final leaderboard score: see the version table below** (local sequential
-validation is calibrated against the platform with a stable gap of ~0.043).
+**Final leaderboard score: 0.19006 (rank 1, as of Nov 18)** - local sequential
+validation is calibrated against the platform with a stable gap of ~0.043.
 
 ## Data
 
@@ -47,8 +47,8 @@ for the symptom and herb vocabularies, so no model download is needed.
 - members: 5x lr5e-4/dropout0.1 + 3x lr5e-4/0.2 + 2x lr1e-3/0.1, 15 epochs on
   full data (median of sequential early-stop), seeds 2026/7/42/123/777/314/159/265/358/979.
 
-Local sequential validation: **0.2335** (80/20) and **0.2292** (75/25), vs 0.17427
-for the provided two-tower baseline.
+Local sequential validation: **0.2335** (80/20) and **0.2292** (75/25); platform
+score **0.19006** (rank 1), vs 0.17427 for the provided two-tower baseline.
 
 ## Version history (local sequential / platform)
 
@@ -60,7 +60,7 @@ for the provided two-tower baseline.
 | v3 | + 5-member MLP ensemble, lr5e-4 | 0.2277 | 0.18484 |
 | v4 | + semantic-name feature (platform-negative, reverted) | 0.2291 | 0.18255 |
 | v5 | no semantics + 10 members | 0.2285 | 0.18505 |
-| **v6** | **drop combination-hit feature, pure ensemble** | **0.2335** | see platform |
+| **v6** | **drop combination-hit feature, pure ensemble** | **0.2335** | **0.19006 (rank 1)** |
 
 ## Reproduce
 
